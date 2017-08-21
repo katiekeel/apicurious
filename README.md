@@ -12,15 +12,15 @@ This project was created using Ruby 2.4 and Rails 5.1.3.
 
 #### Setup
 
-`$ git clone git@github.com:katiekeel/apicurious.git`
-`$ bundle`
-`$ rails db:create db:migrate`
+`$ git clone git@github.com:katiekeel/apicurious.git`  
+`$ bundle`  
+`$ rails db:create db:migrate`  
 
 #### Navigation
 
-`localhost:3000`
+`localhost:3000`  
 
 #### Testing
 
-`$ rails db:test:prepare`
-`$ rspec`
+`$ rails db:test:prepare`  
+`$ rspec`  
