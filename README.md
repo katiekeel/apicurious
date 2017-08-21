@@ -1,24 +1,26 @@
-# README
+## Apicurious
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Summary
 
-Things you may want to cover:
+This [cleverly named](http://www.epicurious.com/) project is an exploration of API consumption and presentation within Rails.
 
-* Ruby version
+The project uses OmniAuth and the Github API to display users profile information, recent activity, activity from users one follows, organizations one belongs to, and a list of one's repositories.
 
-* System dependencies
+#### Versions and stuff
 
-* Configuration
+This project was created using Ruby 2.4 and Rails 5.1.3.
 
-* Database creation
+#### Setup
 
-* Database initialization
+`$ git clone git@github.com:katiekeel/apicurious.git`
+`$ bundle`
+`$ rails db:create db:migrate`
 
-* How to run the test suite
+#### Navigation
 
-* Services (job queues, cache servers, search engines, etc.)
+`localhost:3000`
 
-* Deployment instructions
+#### Testing
 
-* ...
+`$ rails db:test:prepare`
+`$ rspec`
