@@ -14,7 +14,16 @@ require 'rails_helper'
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-#
+def stub_omniauth
+  # first, set OmniAuth to run in test mode
+  OmniAuth.config.test_mode = true
+  # then, provide a set of fake oauth data that
+  # omniauth will use when a user tries to authenticate:
+  OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+
+  })
+end
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
