@@ -19,9 +19,19 @@ def stub_omniauth
   OmniAuth.config.test_mode = true
   # then, provide a set of fake oauth data that
   # omniauth will use when a user tries to authenticate:
-  OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-
-  })
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+     "provider" => "github",
+          "uid" => "11282627",
+         "info" => {
+            "nickname" => "katiekeel",
+               "email" => "akatiekeel@gmail.com",
+                "name" => "Katie Keel",
+               "image" => "https://avatars2.githubusercontent.com/u/11282627?v=4"
+            },
+          "credentials" => {
+                "token" => "85ce0dd0bbefef38615e6fee18abb663cebfbb49"
+            }
+          })
 end
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
@@ -105,4 +115,10 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # Use color not only in STDOUT but also in pagers and files
+  config.tty = true
+
+  # Use the specified formatter
+  config.formatter = :documentation
 end
