@@ -14,16 +14,28 @@
  @import "bootstrap";
 
  .navbar-styles {
-   background-color: black;
+   background-color: #215cba;
  }
 
- .nav-tabs > li, .nav-pills > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-     zoom:1; /* hasLayout ie7 trigger */
+  #navbar-text {
+    color: #ffffff;
+  }
+
+
+  .navbar-nav > li.open > a:hover,
+  .navbar-nav > li.open > a:focus,
+  .navbar-nav > li.open > a:active,
+  .navbar-nav > li.open > a {
+    background-color: #174184 !important;
+  }
+
+.nav-tabs > li, .nav-pills > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+   zoom:1; /* hasLayout ie7 trigger */
 }
 
 .nav-tabs, .nav-pills {
-    text-align:center;
+  text-align:center;
 }
