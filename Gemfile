@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem "omniauth-github"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
