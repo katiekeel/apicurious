@@ -29,9 +29,40 @@
         </ul>
 
         <div class="tab-content" id="tabs">
-          <div class="tab-pane" id="starred-repos" role="tabpanel"></div>
-          <div class="tab-pane" id="followers" role="tabpanel"></div>
-          <div class="tab-pane" id="following" role="tabpanel"></div>
+          <div class="tab-pane" id="starred-repos" role="tabpanel">
+            <table class="table profile-tables">
+              <thead>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Description</th>
+              </thead>
+
+              <tbody>
+              <% @starred_repos.each do |repo| %>
+                <tr>
+                  <th scope="row"><%= link_to repo[:full_name].split('/')[-1], repo[:html_url], target: :_blank %></th>
+                  <td align="left"><%= repo[:owner][:login] %></td>
+                  <td align="left"><%= repo[:description] %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+
+          </div>
+
+
+
+          <div class="tab-pane profile-tables" id="followers" role="tabpanel">
+           <% @followers.each do |follower| %>
+              <h4><%= link_to follower[:login], follower[:html_url], target: :_blank %></h4>
+           <% end %>
+          </div>
+
+          <div class="tab-pane profile-tables" id="following" role="tabpanel">
+            <% @following.each do |following| %>
+              <h4><%= link_to following[:login], following[:html_url], target: :_blank %></h4>
+            <% end %>
+          </div>
         </div>
 
       </div>

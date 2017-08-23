@@ -250,6 +250,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   factory_girl_rails
+  faraday
   figaro
   jquery-rails
   launchy

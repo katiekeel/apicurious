@@ -15,4 +15,16 @@ class User < ApplicationRecord
     user.save
     user
   end
+
+  def self.find_starred_repos(screen_name)
+    GithubService.find_starred_repos(screen_name)
+  end
+
+  def self.find_followers(screen_name)
+    GithubService.find_followers(screen_name)
+  end
+
+  def self.find_following(screen_name)
+    GithubService.find_following(screen_name)
+  end
 end
