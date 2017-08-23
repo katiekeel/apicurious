@@ -27,4 +27,12 @@ class User < ApplicationRecord
   def self.find_following(screen_name)
     GithubService.find_following(screen_name)
   end
+
+  def self.find_organizations(screen_name)
+    GithubService.find_organizations(screen_name)
+  end
+
+  def self.find_repos(screen_name)
+    GithubService.find_repos(screen_name)
+  end
 end

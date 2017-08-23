@@ -39,4 +39,20 @@ class GithubService
     get_url("/users/#{user}/following?client_id=#{ENV["GITHUB_CLIENT_ID"]}&client_secret=#{ENV["GITHUB_CLIENT_SECRET"]}")
   end
 
+  def self.find_organizations(user)
+    new(user).find_organizations
+  end
+
+  def find_organizations
+    get_url("/users/#{user}/orgs?client_id=#{ENV["GITHUB_CLIENT_ID"]}&client_secret=#{ENV["GITHUB_CLIENT_SECRET"]}")
+  end
+
+  def self.find_repos(user)
+    new(user).find_repos
+  end
+
+  def find_repos
+    get_url("/users/#{user}/repos?client_id=#{ENV["GITHUB_CLIENT_ID"]}&client_secret=#{ENV["GITHUB_CLIENT_SECRET"]}")
+  end
+
 end

@@ -1,0 +1,6 @@
+<h1 class="text-center">Your Organizations</h1>
+<div class="container text-center profile-tables">
+  <% @organizations.each do |org| %>
+    <h4><%= link_to org[:login], org[:url], target: :_blank %></h4>
+  <% end %>
+</div>
