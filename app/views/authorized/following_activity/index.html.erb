@@ -1,0 +1,27 @@
+<div class="container text-center">
+
+  <h1>Events from People You Follow</h1>
+
+    <table class="table profile-tables">
+
+      <thead>
+        <th>Person</th>
+        <th>Date</th>
+        <th>Event Type</th>
+        <th>Repo</th>
+      </thead>
+
+      <tbody>
+        <% @events.each do |event| %>
+        <tr>
+          <th scope="row"><%= event[:user] %></th>
+            <td align="left"><%= event[:date].strftime("%a %b %e %Y ") %></td>
+            <td align="left"><%= event[:type] %></td>
+            <td align="left"><%= event[:repo] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+    </div>

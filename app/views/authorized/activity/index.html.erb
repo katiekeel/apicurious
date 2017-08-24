@@ -1,0 +1,25 @@
+<div class="container text-center">
+
+  <h1>Your Recent Commits</h1>
+
+    <table class="table profile-tables">
+
+      <thead>
+        <th>Date</th>
+        <th align="center">Repo</th>
+        <th>Message</th>
+      </thead>
+
+      <tbody>
+        <% @commits.each do |commit| %>
+        <tr>
+          <th scope="row"> <%= commit[:date].strftime("%a %b %e %Y ") %> </th>
+            <td align="left"> <%= commit[:repo] %> </td>
+            <td align="left"> <%= commit[:message] %>  </td>
+        </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+    </div>

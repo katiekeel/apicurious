@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   validates_presence_of :name, :email, :provider, :uid, :screen_name, :oauth_token, :image_url
+  has_many :repos
 
   def self.find_or_create_by_auth(auth)
     user = User.find_or_create_by(provider: auth['provider'], uid: auth['uid'])
@@ -35,4 +36,13 @@ class User < ApplicationRecord
   def self.find_repos(screen_name)
     GithubService.find_repos(screen_name)
   end
+
+  def self.find_events(screen_name)
+    GithubService.find_events(screen_name)
+  end
+
+  def self.find_following_events(screen_name)
+    GithubService.find_following_events(screen_name)
+  end
+
 end
